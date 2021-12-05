@@ -1,0 +1,5 @@
+alumno:1  calificacion: 4.000000
+alumno:2  calificacion: 2.000000
+alumno:3  calificacion: 4.000000
+
+ El promedio del grupo es 3.00
