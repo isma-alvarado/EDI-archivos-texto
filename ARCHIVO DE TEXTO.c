@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define MAX_ALUMNOS 50
+#define N 20
 
 
 /*
@@ -41,12 +42,12 @@ printf("Dime el numero de alumnos: \n");
 scanf("%d",&NumAlumnos);
 
 
-if(NumAlumnos>50)
+if(NumAlumnos>MAX_ALUMNOS)
 
 printf("\n El numero maximo es 50 \n");
 printf("\n");
 
-}while(NumAlumnos>50);
+}while(NumAlumnos>MAX_ALUMNOS);
 
 
 LeeCalificaciones(NumAlumnos,calificaciones);
@@ -73,6 +74,7 @@ return 0;
 void LeeCalificaciones(int alumnos,float calif[MAX_ALUMNOS])    //  float calif[MAX_ALUMNOS] = float *calif
 {
 
+    char nombre[N];
     FILE *archivo;
     int cerrado;
     archivo = fopen("ALUMNOS.txt","r"); //abriendo archivo
@@ -88,9 +90,12 @@ void LeeCalificaciones(int alumnos,float calif[MAX_ALUMNOS])    //  float calif[
     int i;
     for(i=0;i<alumnos;i++)    //i=i+1
     {
-       printf("Dame la Calificacion No.%d: \n",i+1);
+        printf("Dime el nombre del Alumno %d: ",i+1);
+        scanf("%s",nombre);
+       printf("Calificacion: ");
        scanf("%f",&calif[i]);
-        fprintf(archivo,"alumno:%d  ",i+1);
+       printf("\n");
+        fprintf(archivo,"alumno:%s  ",nombre);
         fprintf(archivo,"calificacion: %f",calif[i]);
         fprintf(archivo,"\n");
 
