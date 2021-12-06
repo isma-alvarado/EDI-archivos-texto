@@ -1,5 +1,7 @@
-alumno:1  calificacion: 4.000000
-alumno:2  calificacion: 2.000000
-alumno:3  calificacion: 4.000000
+alumno:jose  calificacion: 8.000000
+alumno:pedro  calificacion: 3.000000
+alumno:antonio  calificacion: 9.000000
+alumno:juan  calificacion: 10.000000
+alumno:luis  calificacion: 6.000000
 
- El promedio del grupo es 3.00
+ El promedio del grupo es 7.00
